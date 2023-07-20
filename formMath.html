@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="conteiner-fluid">
+    <div class="sidebar bg-light">
+      <div class="row">
+        <div class="col-sm">
+          <li>
+            <h4 class="text-center">ТОВ "БІЛДГРУП"</h4>
+            <hr>
+            <ul><a href="index.html">Головна</a></ul>
+            <ul><a href="form10farba.html">Норма витрати матеріалу</a></ul>
+            <ul><a href="formMath.html">Розрахунок витрат матеріалів</a></ul>
+            <ul><a href="index.html">Форма3</a></ul>
+            <ul><a href="index.html">Форма4</a></ul>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row text-center">
+        <div class="col-sm mt-2">
+          <h1>Розрахунок витрат матеріалу <br>
+          </h1>
+          <hr>
+        </div>
+        <div class="row text-center">
+          <table id="myTable" class="table table-hover">
+            <thead>
+              <tr class="table-light">
+                <th scope="col">Тип лінії</th>
+                <th scope="col">Ширіна</th>
+                <th scope="col">Протяжність</th>
+                <th scope="col">Матеріал</th>
+                <th scope="col">Фарба (тн)</th>
+                <th scope="col">Пластик (тн)</th>
+                <th scope="col">Затверджувач (тн)</th>
+                <th scope="col">Розчинник (тн)</th>
+                <th scope="col">Кульки (тн)</th>
+              </tr>
+            </thead>
+            <form name="form" action="addVal()" id="heightKM" method="get">
+              <tr>
+                <td scope="col">
+                  <select id="selectLine" name="selectLine" class="form-select form-select-sm ms-2" aria-label="selectKM">
+                    <option selected value="0">1.1.</option>
+                    <option value="1">1.2.</option>
+                    <option value="2">1.3.</option>
+                    <option value="3">1.4.</option>
+                    <option value="4">1.5.</option>
+                    <option value="5">1.6.</option>
+                    <option value="6">1.7.</option>
+                    <option value="7">1.8.</option>
+                    <option value="8">1.11.</option>
+                    <option value="9">1.13.-1.19</option>
+                  </select>
+                </td>
+                <td scope="col">
+                  <select name="selectWidth" class="form-select form-select-sm" aria-label="selectCM">
+                    <option selected value="0">10 см</option>
+                    <option value="1">15 см</option>
+                    <option value="2">20 см</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="input-group input-group-sm">
+                    <input id="inputKM" name="inputKM" type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                      aria-describedby="basic-addon2">
+                    <span class="input-group-text p-1" id="basic-addon2">км</span>
+                  </div>
+                </td>
+                <td scope="col">
+                  <select name="selectMat" class="form-select form-select-sm" aria-label="selectCM">
+                    <option selected>Фарба</option>
+                    <option value="1">Пластик</option>
+                  </select>
+                </td>
+                <td id="farba">0</td>
+                <td id="plastik">0</td>
+                <td id="zatver">0</td>
+                <td id="rozchin">0</td>
+                <td id="kuli">0</td>
+              </tr>
+            </form>
+          </table>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end btn-sm">
+            <button class="btn btn-success" onclick="addVal()" type="button" form="heightKM">Розрахувати</button>
+            <button class="btn btn-primary" onclick="addRow()" type="button" form="heightKM">Додати лінію</button>
+            <button class="btn btn-secondary" onclick="resetVal(0)" type="reset" form="heightKM">Очистити форму</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
