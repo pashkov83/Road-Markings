@@ -36,28 +36,61 @@ let widthLine = 0.10
 let lengthLine = 1
 
 
-//document.getElementById('reflectiveSpheres14').textContent = transfer.toString().replace('.',',')
+//Заполнение ячеек значениями 
+//===========================
+function returnCellsValues() {
+  const lineProportion = [1, 1, 2, 1, 0.3333, 0.6666, 0.5, 0.6666, 1.6666]
+  const paintNameCells = document.getElementsByName('paint')
+  const solventNameCells = document.getElementsByName('solvent')
+  const reflectiveSpheresNameCells = document.getElementsByName('reflectiveSpheres')
+  for (i = 0; i < paintNameCells.length; i++) {
+    paintNameCells[i].textContent = (lineProportion[i] * paint * lengthLine * widthLine * depthLine * transfer).toFixed(4).toString().replace('.', ',')
+    solventNameCells[i].textContent = (lineProportion[i] * solvent * depthLine * widthLine * transfer).toFixed(4).toString().replace('.', ',')
+    reflectiveSpheresNameCells[i].textContent = (lineProportion[i] * reflectiveSpheres * widthLine * transfer).toFixed(4).toString().replace('.', ',')
+  }
+}
+returnCellsValues()
+
+//Изменение ширины линии (type=radio)
+//==================================
+function radioWidthLine() {
+  if (document.getElementById('flexRadioDefault2').checked === true) {
+    widthLine = 0.15,
+      returnCellsValues()
+  } else {
+    widthLine = 0.10,
+      returnCellsValues()
+  }
+}
 
 
 
-
-
-
-
-
-const materialArray = [
+/*
+const materialArrayCells = [
 ['paint11', 'paint12', 'paint13', 'paint14', 'paint15', 'paint16', 'paint17', 'paint18', 'paint111'],
 ['solvent11', 'solvent12', 'solvent13', 'solvent14', 'solvent15', 'solvent16', 'solvent17', 'solvent18', 'solvent111'],
 ['reflectiveSpheres11', 'reflectiveSpheres12', 'reflectiveSpheres13', 'reflectiveSpheres14', 'reflectiveSpheres15', 'reflectiveSpheres16', 'reflectiveSpheres17', 'reflectiveSpheres18', 'reflectiveSpheres111'],
 [proportion11, proportion12, proportion13, proportion14, proportion15, proportion16, proportion17, proportion18, proportion111]
 ]
-let i=0
-materialArray[0].forEach(el=>document.getElementById(el).textContent = (paint * lengthLine * materialArray[3][i++] * widthLine * depthLine * transfer).toFixed(4).toString().replace('.',','))
-i=0
-materialArray[1].forEach(el=>document.getElementById(el).textContent = (solvent * materialArray[3][i++] * depthLine * transfer).toFixed(4).toString().replace('.',','))
-i=0
-materialArray[2].forEach(el=>document.getElementById(el).textContent = (reflectiveSpheres * materialArray[3][i++] * lengthLine * transfer).toFixed(4).toString().replace('.',','))
 
+function con(){
+let i=0
+materialArrayCells[0].forEach(el=>document.getElementById(el).textContent = (paint * lengthLine * materialArrayCells[3][i++] * widthLine * depthLine * transfer).toFixed(4).toString().replace('.',','))
+i=0
+materialArrayCells[1].forEach(el=>document.getElementById(el).textContent = (solvent * materialArrayCells[3][i++] * depthLine * widthLine * transfer).toFixed(4).toString().replace('.',','))
+i=0
+materialArrayCells[2].forEach(el=>document.getElementById(el).textContent = (reflectiveSpheres * materialArrayCells[3][i++] * widthLine * transfer).toFixed(4).toString().replace('.',','))
+}
+con()
+function radioWidthLine(){
+if (document.getElementById('flexRadioDefault2').checked === true){
+  widthLine=0.15, 
+  con()
+}else{
+  widthLine=0.10,
+  con()}
+}
+*/
 
 
 
@@ -87,11 +120,6 @@ const resetTableValue = () => tableValue.forEach(el => document.getElementById(e
 //class + calcValue + outData (SupposeMaterialAmount) 
 //valid (inputKM )
 
-//paint 0,0942
-//solvent 0,00471
-//reflectiveSpheres 0,025
-//width 10
-//material
 
 
 
@@ -107,26 +135,5 @@ class ConsumptionNorms {
 }
 const valueNorms = new ConsumptionNorms()
 
-// function addVal() {
-//   let typeLine = document.getElementById('selectLine').value
-//   switch (typeLine) {
-//     case '0': document.getElementById('paint').textContent = (0.0942 * document.getElementById('inputKM').value).toFixed(4)
-//       document.getElementById('solvent').textContent = (0.00471 * document.getElementById('inputKM').value).toFixed(4)
-//       document.getElementById('reflectiveSpheres').textContent = (0.025 * document.getElementById('inputKM').value).toFixed(4)
-//       break;
-//     case '1': document.getElementById('paint').textContent = 0
-//       break;
-//     case '2': document.getElementById('paint').textContent = (0.1884 * document.getElementById('inputKM').value).toFixed(4)
-//       break;
-//     case '3': document.getElementById('paint').textContent = 0
-//       break;
-//     case '4': document.getElementById('paint').textContent = (0.0314 * document.getElementById('inputKM').value).toFixed(4)
-//       break;
-//     case '5': document.getElementById('paint').textContent = (0.0628 * document.getElementById('inputKM').value).toFixed(4)
-//       break;
-//     case '6': document.getElementById('paint').textContent = (0.0471 * document.getElementById('inputKM').value).toFixed(4)
-//       break;
-//     default: alert('error')
-//   }
-// }
+
 
