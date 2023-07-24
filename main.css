@@ -26,5 +26,8 @@ body {
     display: flex;
 }
 
-
+.widthLine {
+    font-size: smaller;
+    padding: 2px;
+}
 

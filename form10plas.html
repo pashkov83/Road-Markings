@@ -34,7 +34,6 @@
       <div class="row text-center">
         <div class="col-sm mt-2">
           <h1>Норми витрат матеріалу <br>
-            <h3>при ширині нанесення розмітки - <u><strong>10 см</strong></u></h3>
           </h1>
           <hr>
         </div>
@@ -42,25 +41,30 @@
           <div class="col-sm">
             <ul class="nav nav-tabs justify-content-center">
               <li class="nav-item">
-                <a class="nav-link" href="form10farba.html">Фарба (ширина 10 см)</a>
+                <a class="nav-link" href="form10farba.html"><strong>Фарба (середньої густини)</strong>(при товщині
+                  нанесення 0,6 мм)</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="form15farba.html">Фарба (ширина 15 см)</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active bg-light" aria-current="page" href="#">Пластик (ширина 10 см)</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="form15plas.html">Пластик (ширина 15 см)</a>
+                <a class="nav-link active bg-light" aria-current="page" href="#"><strong> Холодний пластик</strong>(при
+                  товщині нанесення 3 мм)</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="row text-center">
           <table class="table table-hover">
+            <caption class="ms-3">Розрахунки виконано згідно з ДСТУ 2587:2021 та СОУ 42.1-37641918-095:2012</caption>
             <thead>
               <tr class="table-light">
-                <th scope="col">Тип лінії по ДСТУ 2587:2021</th>
+                <th scope="col">Тип лінії</th>
+                <th scope="col">
+                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                    onclick="radioWidthLine()" checked>
+                  <label class="btn btn-primary widthLine" for="option1">10 см</label>
+                  <input type="radio" class="btn-check" name="options" id="flexRadioDefault2" autocomplete="off"
+                    onclick="radioWidthLine()">
+                  <label class="btn btn-primary widthLine" for="flexRadioDefault2">15 см</label>
+                </th>
                 <th scope="col">Пластик (тн)</th>
                 <th scope="col">Затверджувач (тн)</th>
                 <th scope="col">Розчинник (тн)</th>
@@ -68,79 +72,89 @@
               </tr>
             </thead>
             <tr>
-              <th scope="col">1.1. (0,10м) (1 км)</th>
-              <td>0,5967</td>
-              <td>0,0119</td>
-              <td>0,0238</td>
-              <td>0,03</td>
+              <th scope="col">1.1. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.2. (0,10м) (1 км)</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
+              <th scope="col">1.2. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.3. (0,10м) (1 км)</th>
-              <td>1,1934</td>
-              <td>0,0238</td>
-              <td>0,0477</td>
-              <td>0,06</td>
+              <th scope="col">1.3. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.4. (0,10м) (1 км)</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
+              <th scope="col">1.4. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.5. (0,10м) (1 км)</th>
-              <td>0,1989</td>
-              <td>0,0039</td>
-              <td>0,0079</td>
-              <td>0,01</td>
+              <th scope="col">1.5. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.6. (0,10м) (1 км)</th>
-              <td>0,3978</td>
-              <td>0,0079</td>
-              <td>0,0159</td>
-              <td>0,02</td>
+              <th scope="col">1.6. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.7. (0,10м) (1 км)</th>
-              <td>0,2984</td>
-              <td>0,0059</td>
-              <td>0,0119</td>
-              <td>0,015</td>
+              <th scope="col">1.7. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.8. (0,20м) (1 км)</th>
-              <td>0,3978</td>
-              <td>0,0079</td>
-              <td>0,0159</td>
-              <td>0,02</td>
+              <th scope="col">1.8. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.11. (0,10м) (1 км)</th>
-              <td>0,9945</td>
-              <td>0,0198</td>
-              <td>0,0397</td>
-              <td>0,05</td>
+              <th scope="col">1.11. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="plastic"></td>
+              <td name="hardener"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
               <th scope="col">1.13.-1.19. (1 м<sup>2</sup>)</th>
+              <td>-</td>
               <td>0,0061</td>
               <td>0,000122</td>
               <td>0,000244</td>
@@ -149,6 +163,7 @@
             </tr>
             <tr>
               <th scope="col">1.20. (1 м<sup>2</sup>)</th>
+              <td>-</td>
               <td>0,0061</td>
               <td>0,000122</td>
               <td>0,000244</td>

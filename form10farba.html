@@ -34,7 +34,6 @@
       <div class="row text-center">
         <div class="col-sm mt-2">
           <h1>Норми витрат матеріалу<br>
-            <h3>при ширині нанесення розмітки - <u><strong>10 см</strong></u></h3>
           </h1>
           <hr>
         </div>
@@ -42,95 +41,110 @@
           <div class="col-sm">
             <ul class="nav nav-tabs justify-content-center">
               <li class="nav-item">
-                <a class="nav-link active bg-light" aria-current="page" href="#">Фарба (ширина 10 см)</a>
+                <a class="nav-link active bg-light" aria-current="page" href="#"><strong>Фарба (середньої
+                    густини)</strong>(при товщині нанесення 0,6 мм)</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="form15farba.html">Фарба (ширина 15 см)</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="form10plas.html">Пластик (ширина 10 см)</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="form15plas.html">Пластик (ширина 15 см)</a>
+                <a class="nav-link" href="form10plas.html"><strong> Холодний пластик</strong>(при товщині нанесення 3
+                  мм)</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="row text-center">
           <table class="table table-hover">
+            <caption class="ms-3">Розрахунки виконано згідно з ДСТУ 2587:2021 та СОУ 42.1-37641918-095:2012</caption>
             <thead>
               <tr class="table-light">
-                <th scope="col">Тип лінії по ДСТУ 2587:2021</th>
+                <th scope="col">Тип лінії</th>
+                <th scope="col">
+                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                    onclick="radioWidthLine()" checked>
+                  <label class="btn btn-primary widthLine" for="option1">10 см</label>
+                  <input type="radio" class="btn-check" name="options" id="flexRadioDefault2" autocomplete="off"
+                    onclick="radioWidthLine()">
+                  <label class="btn btn-primary widthLine" for="flexRadioDefault2">15 см</label>
+                </th>
                 <th scope="col">Фарба (тн)</th>
                 <th scope="col">Розчинник (тн)</th>
                 <th scope="col">Кульки (тн)</th>
               </tr>
             </thead>
             <tr>
-              <th scope="col">1.1. (0,10м) (1 км)</th>
-              <td name="paint" id="paint11"></td>
-              <td name="solvent" id="solvent11"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres11"></td>
+              <th scope="col">1.1. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.2. (0,10м) (1 км)</th>
-              <td name="paint" id="paint12"></td>
-              <td name="solvent" id="solvent12"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres12"></td>
+              <th scope="col">1.2. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.3. (0,15м) (1 км)</th>
-              <td name="paint" id="paint13"></td>
-              <td name="solvent" id="solvent13"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres13"></td>
+              <th scope="col">1.3. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.4. (0,10м) (1 км)</th>
-              <td name="paint" id="paint14"></td>
-              <td name="solvent" id="solvent14"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres14"></td>
+              <th scope="col">1.4. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.5. (0,10м) (1 км)</th>
-              <td name="paint" id="paint15"></td>
-              <td name="solvent" id="solvent15"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres15"></td>
+              <th scope="col">1.5. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.6. (0,10м) (1 км)</th>
-              <td name="paint" id="paint16"></td>
-              <td name="solvent" id="solvent16"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres16"></td>
+              <th scope="col">1.6. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.7. (0,10м) (1 км)</th>
-              <td name="paint" id="paint17"></td>
-              <td name="solvent" id="solvent17"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres17"></td>
+              <th scope="col">1.7. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.8. (0,20м) (1 км)</th>
-              <td name="paint" id="paint18"></td>
-              <td name="solvent" id="solvent18"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres18"></td>
+              <th scope="col">1.8. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
-              <th scope="col">1.11. (0,10м) (1 км)</th>
-              <td name="paint" id="paint111"></td>
-              <td name="solvent" id="solvent111"></td>
-              <td name="reflectiveSpheres" id="reflectiveSpheres111"></td>
+              <th scope="col">1.11. (1 км)</th>
+              <td name="widthLine"></td>
+              <td name="paint"></td>
+              <td name="solvent"></td>
+              <td name="reflectiveSpheres"></td>
 
             </tr>
             <tr>
               <th scope="col">1.13.-1.19. (1 м<sup>2</sup>)</th>
+              <td name="">-</td>
               <td>0,00097</td>
               <td>0,0000485</td>
               <td>0,00025</td>
@@ -138,28 +152,14 @@
             </tr>
             <tr>
               <th scope="col">1.20. (1 м<sup>2</sup>)</th>
+              <td name="">-</td>
               <td>0,00103</td>
               <td>0,0000515</td>
               <td>0,00025</td>
 
             </tr>
           </table>
-          <div class="row">
-            <div class="col-2 ms-2">
-              <div id="radioWidthLine" class="form-check">
-                <input class="form-check-input" autocomplete="off" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="radioWidthLine()" checked>
-                <label class="form-check-label" for="flexRadioDefault1">
-                  10 см
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" autocomplete="off" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="radioWidthLine()">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  15 см
-                </label>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
